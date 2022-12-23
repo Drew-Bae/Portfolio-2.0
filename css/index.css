@@ -1,9 +1,13 @@
 /* World Elements */
+body {
+    background: #07252d;
+}
+
 h1 {
     margin: 0;
     margin-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    color: #000;
 }
 
 .centered {
@@ -146,6 +150,7 @@ h1 {
     }
 }
 
+/* Main */
 .main {
     position: fixed;
     height: 90vh;
@@ -154,4 +159,57 @@ h1 {
     left: 5vw;
     background: RGBA(102,94,101,0.47);
     border-radius: 25px;
+}
+
+/* Tube Text */
+.heading {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.heading h1:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.tube {
+    position: relative;
+    font-size: 4em;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    line-height: 0.7em;
+    outline: none;
+    animation: tube 5s linear 2;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+}
+
+@keyframes tube {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .heading h1:nth-child(1) {
+        margin-bottom: 25px;
+    }
+
+    .tube {
+        font-size: 10em;
+    }
 }
