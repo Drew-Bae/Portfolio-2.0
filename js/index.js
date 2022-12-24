@@ -25,6 +25,14 @@ function typeWriter2() {
 setTimeout(typeWriter, 0);
 setTimeout(typeWriter2, 1800);
 
+/* Appear Pages on Click */
+const projectToggle = document.getElementById('toggleProject');
+const project = document.getElementById('project');
+
+projectToggle.addEventListener("click", function() {
+  project.setAttribute("style", "display: block");
+});
+
 /* Power Button */
 const opening = document.getElementById('opening');
 const powerBtn = document.getElementById('powerBtn');
