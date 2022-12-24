@@ -1,4 +1,8 @@
 /* World Elements */
+:root {
+
+}
+
 body {
     background: #07252d;
 }
@@ -20,6 +24,63 @@ h1 {
 .stopAnimation {
     animation: none !important;
     cursor: none;
+}
+
+@font-face {
+    font-family: 'quicksanddash';
+    src: url('quicksand_dash-webfont.woff2') format('woff2'),
+         url('quicksand_dash-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'quicksandbold';
+    src: url('/fonts/quicksand-bold-webfont.woff2') format('woff2'),
+         url('quicksand-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'quicksandbold_italic';
+    src: url('quicksand-bolditalic-webfont.woff2') format('woff2'),
+         url('quicksand-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'quicksanditalic';
+    src: url('quicksand-italic-webfont.woff2') format('woff2'),
+         url('quicksand-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('quicksand-light-webfont.woff2') format('woff2'),
+         url('quicksand-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'quicksandlight_italic';
+    src: url('quicksand-lightitalic-webfont.woff2') format('woff2'),
+         url('quicksand-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('quicksand-regular-webfont.woff2') format('woff2'),
+         url('quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 /* Really nice color with this filter (filter: invert(26%) sepia(0%) saturate(1176%) hue-rotate(253deg) brightness(93%) contrast(91%);) */
 
@@ -150,17 +211,6 @@ h1 {
     }
 }
 
-/* Main */
-.main {
-    position: fixed;
-    height: 90vh;
-    width: 90vw;
-    top: 5vh;
-    left: 5vw;
-    background: RGBA(102,94,101,0.47);
-    border-radius: 25px;
-}
-
 /* Tube Text */
 .heading {
     margin-top: 50px;
@@ -211,5 +261,73 @@ h1 {
 
     .tube {
         font-size: 10em;
+    }
+}
+
+/* Main */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    font-family: 'quicksandbold', Arial, Helvetica, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size:16px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 45px;
+    margin: 20px;
+    margin-left: 0;
+    max-width: 160px; 
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+.move {
+    margin-top: 20vh;
+}
+
+.btn-1 {
+    background: #07252d;
+    font-weight: 100;
+}
+.btn-1 svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.btn-1 rect {
+    fill: none;
+    stroke: #14ffe9;
+    transition: all 0.35s linear;
+    stroke-width: 0;
+    stroke-dasharray: 15, 310;
+}
+
+.btn-1:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 422, 0;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        font-size: 25px;
+        margin: 30px;
+    }
+
+    .move {
+        margin-top: 30vh;
     }
 }
