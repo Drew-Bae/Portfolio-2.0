@@ -37,7 +37,7 @@ h1 {
 @font-face {
     font-family: 'quicksandbold';
     src: url('/fonts/quicksand-bold-webfont.woff2') format('woff2'),
-         url('quicksand-bold-webfont.woff') format('woff');
+         url('/fonts/quicksand-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -76,8 +76,8 @@ h1 {
 }
 @font-face {
     font-family: 'quicksandregular';
-    src: url('quicksand-regular-webfont.woff2') format('woff2'),
-         url('quicksand-regular-webfont.woff') format('woff');
+    src: url('/fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('/fonts/quicksand-regular-webfont.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -213,11 +213,15 @@ h1 {
 
 /* Tube Text */
 .heading {
+    height: calc(100vh - 50px);
+}
+
+.head {
     margin-top: 50px;
     margin-left: 10px;
 }
 
-.heading h1:nth-child(1) {
+.head h1:nth-child(1) {
     margin-bottom: 10px;
 }
 
@@ -256,7 +260,7 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
-    .heading h1:nth-child(1) {
+    .head h1:nth-child(1) {
         margin-bottom: 25px;
     }
 
@@ -336,9 +340,6 @@ h1 {
 /* Projects */
 .project {
     display: none;
-    margin-top: 100vh;
-    height: 100vh;
-    width: 100vw;
     border: 1px solid #07252d;
 }
 
@@ -397,5 +398,66 @@ h1 {
     .video-container h2 {
         font-size: 3em;
         margin-bottom: 20px;
+    }
+}
+
+/* Info Section */
+.info {
+    display: none;
+    padding: 20px;
+    font-family: 'quicksandregular', Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: #fff;
+}
+
+.info h1 {
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+
+.info p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.info p b {
+    color: #14ffe9;
+}
+
+@media screen and (min-width: 768px) {
+    .info h1 {
+        margin-bottom: 80px;
+    }
+
+    .info p {
+        font-size: 1.5em;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/* Contact Section */
+.contact {
+    position: absolute;
+    display: none;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+}
+
+.icon {
+    color: #fff;
+}
+
+.middle-icon {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        left: initial;
+        transform: initial;
+        right: 20px;
     }
 }

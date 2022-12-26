@@ -27,10 +27,22 @@ setTimeout(typeWriter2, 1800);
 
 /* Appear Pages on Click */
 const projectToggle = document.getElementById('toggleProject');
+const infoToggle = document.getElementById('toggleInfo');
+const contactToggle = document.getElementById('toggleContact');
 const project = document.getElementById('project');
+const info = document.getElementById('info');
+const contact = document.getElementById('contact');
 
 projectToggle.addEventListener("click", function() {
   project.setAttribute("style", "display: block");
+});
+
+infoToggle.addEventListener("click", function() {
+  info.setAttribute("style", "display: block");
+});
+
+contactToggle.addEventListener("click", function() {
+  contact.setAttribute("style", "display: block");
 });
 
 /* Power Button */
